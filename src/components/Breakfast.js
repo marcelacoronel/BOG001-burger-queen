@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-export default class Desayuno extends Component{
+export default class Breakfast extends Component{
 
     render() {
         return (
