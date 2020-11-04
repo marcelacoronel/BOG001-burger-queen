@@ -22,9 +22,7 @@ class App extends Component {
           <Route path="/detallePedido" component={DetallePedido} />
         </Router> 
       
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+      
       </div>
     );
   }
