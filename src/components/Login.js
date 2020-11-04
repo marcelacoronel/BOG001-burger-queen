@@ -1,6 +1,6 @@
 import { React} from 'react';
 import loginNamelogo from '../img/loginNamelogo.png';
-
+//-------------------------------------------------
 
 const Login = () => {
 
@@ -16,7 +16,7 @@ const Login = () => {
                             <input name="user" type="email" placeholder="email@gmail.com" required />
                             <label>Password</label>
                             <input name="password" placeholder="password" type="password" required />
-                            <button>INGRESAR</button>
+                            <button onClick={()=>window.location.href = "/selecttable"}>INGRESAR</button>
                         </form>
                     </div>
                 </div>   
