@@ -1,10 +1,10 @@
-import './App.css';
+import '../src/css/styles.css';
 import Login from '../src/components/Login';
-import Mesas from '../src/components/Mesas';
-import Desayuno from '../src/components/Desayuno';
-import Almuerzo from '../src/components/Almuerzo';
+// import NavBar from '../src/components/NavBar';
+import Breakfast from './components/Breakfast';
+import Lunch from './components/Lunch';
 import DetallePedido from '../src/components/DetallePedido';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Component } from 'react';
 
 class App extends Component {
@@ -12,17 +12,15 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Link to="/">Login</Link>
-          <br></br>
-          <Link to="/mesas">Vista mesero</Link>
+          {/* <NavBar /> */}
+          
+          <Switch>
           <Route exact path="/" component={Login} />
-          <Route path="/mesas" component={Mesas} />
-          <Route path="/desayuno" component={Desayuno} />
-          <Route path="/almuerzo" component={Almuerzo} />
-          <Route path="/detallePedido" component={DetallePedido} />
+          <Route exact path="/desayuno" component={Breakfast} />
+          <Route exact path="/almuerzo" component={Lunch} />
+          <Route exact path="/detallePedido" component={DetallePedido} />
+          </Switch>
         </Router> 
-      
-      
       </div>
     );
   }
