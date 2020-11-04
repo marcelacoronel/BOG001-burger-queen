@@ -1,29 +1,34 @@
 import '../src/css/styles.css';
-import Login from '../src/components/Login';
-// import NavBar from '../src/components/NavBar';
-import Breakfast from './components/Breakfast';
-import Lunch from './components/Lunch';
-import DetallePedido from '../src/components/DetallePedido';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Component } from 'react';
+// import PageWaiter from '../src/components/pages/PageWaiter';
+// import Login  from '../src/components/Login';
+import NoFound  from '../src/components/NoFound';
+import {useState} from 'react';
 
-class App extends Component {
-  render(){
-    return (
-      <div className="App">
-        <Router>
-          {/* <NavBar /> */}
-          
-          <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/desayuno" component={Breakfast} />
-          <Route exact path="/almuerzo" component={Lunch} />
-          <Route exact path="/detallePedido" component={DetallePedido} />
-          </Switch>
-        </Router> 
+// import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+
+
+const App =() => {
+
+  const [user, setUser] = useState("")
+
+  return (
+    <div className="App">
+      <div>
+        {user}
       </div>
-    );
-  }
+      <NoFound id={setUser}/>
+      {/* <Router>
+        <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path= "/pageWaiter" component={PageWaiter}/>
+        <Route path="/404" component={NoFound} />
+        <Redirect from="*" to="/404" />
+        </Switch>
+        
+      </Router>  */}
+    </div>
+  );
+
 }
 
 export default App;
