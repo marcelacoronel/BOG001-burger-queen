@@ -1,42 +1,54 @@
+// ----- Hoja de estilos --------
 import '../src/css/styles.css';
-import Login from './components/Login';
-//import NavBar from '../src/components/NavBar';
-import Breakfast from './components/Breakfast';
-import Lunch from './components/Lunch';
-import DetallePedido from './components/DetallePedido';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Component } from 'react';
+
+// ----- Dependencias --------
+import {useState} from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // ----- Componentes --------
-import Table from "./components/Table";
-import TakingOrder from "./components/TakingOrder";
-import Status from "./components/StatusOrder";
-import Stock from "./components/Stock";
-import Bill from "./components/Bill";
-import Nav from "./components/Nav";
-import SelectTable from "./components/SelectTable";
+import PageWaiter from '../src/components/pages/PageWaiter';
+import Login  from '../src/components/Login';
+import Layout from '../src/components/Layout';
+import Table from "../src/components/Table";
+import Breakfast from "../src/components/Breakfast";
+import Lunch from "../src/components/Lunch";
+import TakingOrder from "../src/components/TakingOrder";
+import OrderDetail from './components/OrderDetail';
+import OrderStatus from "../src/components/OrderStatus";
+import NoFound  from '../src/components/NoFound';
 
-const App = () => {
+
+const App =() => {
+
+  let currentPath =window.location.pathname;
+
+  if (currentPath === '/'){
+    localStorage.clear('activeUser')
+  }
+
   return (
-            <div className="App">
-              <Router>
-                {/* <NavBar /> */}
-                <Switch>
-                <Route exact path="/" component={Login} />
-                <Route path="/desayuno" component={Breakfast} />
-                <Route path="/almuerzo" component={Lunch} />
-                <Route path="/detallepedido" component={DetallePedido} />
-                <Route path="/table" component={Table} />
-                <Route path="/order/:id" component={TakingOrder} />
-                <Route path="/status" component={Status} />
-                <Route path="/stock" component={Stock} />
-                <Route path="/bill" component={Bill} />
-                <Route path="/nav" component={Nav} />
-                <Route path="/selecttable" component={SelectTable} />
-                </Switch>
-              </Router> 
-            </div>
-  )
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Layout>
+              <Route exact path= "/pageWaiter/:user" component={PageWaiter}/>
+              <Route path="/table" component={Table} />
+              <Route path="/order/:id" component={TakingOrder} />
+              <Route path="/breakfast" component={Breakfast} />
+              <Route path="/lunch" component={Lunch} />
+              <Route path="/orderDetail" component={OrderDetail} />
+              <Route path="/status" component={OrderStatus} />
+          </Layout>
+          <Route path="/404" component={NoFound} />
+          <Redirect from="*" to="/404" />
+        </Switch>
+        
+      </Router> 
+    </div>
+  );
+
 }
+
 
 export default App;
