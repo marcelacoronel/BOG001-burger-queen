@@ -5,7 +5,7 @@ import Breakfast from './components/Breakfast';
 import Lunch from './components/Lunch';
 import DetallePedido from './components/DetallePedido';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Component } from 'react';
+//import { Component } from 'react';
 
 // ----- Componentes --------
 import Table from "./components/Table";
