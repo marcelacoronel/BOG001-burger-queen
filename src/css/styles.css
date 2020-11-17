@@ -1,36 +1,48 @@
+/*Equivalente a 24px, tomando como base 16px*/
+/*Equivalente a 20px, tomando como base 16px*/
+/*--General styles*/
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   font-size: 16px;
+  width: 100vw;
+  height: 100vh;
 }
 
 #root {
-  border: 1px solid yellow;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 97%;
 }
 
 .App {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
   background-color: #E8BA24;
   padding: 5px;
   text-align: center;
-  height: 40px;
+  width: 100%;
+  height: 3%;
+  font-weight: bold;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+}
+footer img {
+  margin: 0 10px;
 }
 
+/*--Component styles --*/
 .login-container {
   background-image: url("../img/burgerLogin.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-flow: row nowrap;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   justify-content: flex-end;
   align-items: center;
 }
@@ -41,20 +53,28 @@ footer {
   width: 40vw;
   height: 80vh;
   padding: 5px;
-  margin: 10px;
+  margin: 5px;
   align-items: center;
   margin-right: 30px;
   font-family: "Montserrat", sans-serif;
 }
 
-.login-img-logo {
-  width: 100%;
-  height: 30%;
+.login-img-burger {
+  width: 50%;
   text-align: center;
-  margin: 10px 5px;
 }
-.login-img-logo img {
+.login-img-burger img {
+  width: 60%;
+}
+
+.login-imgName-logo {
   width: 90%;
+  height: 15%;
+  text-align: center;
+  transform: translateY(-70px);
+}
+.login-imgName-logo img {
+  width: 85%;
 }
 
 .form-group {
@@ -69,30 +89,57 @@ footer {
   margin: 20px 5px;
   padding: 5px;
   width: 90%;
+  height: 50%;
+  justify-content: center;
 }
 .form-group label {
-  margin: 5px 5px;
+  margin: 5px 20px;
 }
 .form-group input {
   filter: blur(0.5px);
-  margin: 10px 5px;
-  padding: 5px;
-  border-radius: 6px;
+  margin: 10px 20px;
   text-align: center;
-  font-weight: bold;
   color: #383838;
   height: 40px;
   font-size: 1.25em;
+  padding: 5px;
+  border-radius: 6px;
+  font-weight: bold;
 }
 .form-group button {
   background-color: #E8BA24;
-  font-family: "Montserrat", normal;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  height: 50px;
+  margin: 20px 20px;
+  font-size: 1.25em;
   padding: 5px;
   border-radius: 6px;
-  height: 50px;
-  margin: 20px 5px;
-  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.navBar-color {
+  border: 3px solid #00ff2a;
+  background-color: gray;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.pageWaiter-container {
+  border: 3px solid #1100ff;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-color {
+  border: 3px solid red;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 15%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
