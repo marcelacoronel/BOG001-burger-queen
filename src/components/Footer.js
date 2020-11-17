@@ -8,7 +8,7 @@ import imgHeartFoote from '../img/imgHeartFooter.png';
             <footer>
                 <p>Hecho con  </p>
                 <img src={imgHeartFoote} alt="heart"/>
-                <p> - Sthephanie Jolianis - Marcela Coronel - 2020</p>
+                <p> - Stephanie Jolianis - Marcela Coronel - 2020</p>
             </footer> 
         </React.Fragment>
     )
