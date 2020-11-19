@@ -1,24 +1,18 @@
 // ----- Hoja de estilos --------
 import '../src/css/styles.css';
-//import NavBar from '../src/components/NavBar';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-//import { Component } from 'react';
-
-// ----- Dependencias --------
-import {useState} from 'react';
-
 
 // ----- Componentes --------
 import PageWaiter from '../src/components/pages/PageWaiter';
 import Login  from '../src/components/Login';
 import Layout from '../src/components/Layout';
 import Table from "../src/components/Table";
-import Breakfast from "../src/components/Breakfast";
-import Lunch from "../src/components/Lunch";
 import TakingOrder from "../src/components/TakingOrder";
-import OrderDetail from './components/OrderDetail';
-import OrderStatus from "../src/components/OrderStatus";
 import NoFound  from '../src/components/NoFound';
+import Status from "./components/StatusOrder";
+import Stock from "./components/Stock";
+import Bill from "./components/Bill";
+import SelectTable from "./components/SelectTable";
 
 
 const App =() => {
@@ -36,12 +30,12 @@ const App =() => {
           <Route exact path="/" component={Login} />
           <Layout>
               <Route exact path= "/pageWaiter/:user" component={PageWaiter}/>
-              <Route path="/table" component={Table} />
-              <Route path="/order/:id" component={TakingOrder} />
-              <Route path="/breakfast" component={Breakfast} />
-              <Route path="/lunch" component={Lunch} />
-              <Route path="/orderDetail" component={OrderDetail} />
-              <Route path="/status" component={OrderStatus} />
+              <Route exact path="/table" component={Table} />
+                <Route exact path="/order/:id" component={TakingOrder} />
+                <Route exact path="/status" component={Status} />
+                <Route exact path="/bill" component={Bill} />
+                <Route exact path="/selecttable" component={SelectTable} />
+                <Route exact path="/stock" component={Stock} />
           </Layout>
           <Route path="/404" component={NoFound} />
           <Redirect from="*" to="/404" />
