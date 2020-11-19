@@ -1,12 +1,19 @@
-import { Component } from 'react';
+import dataMenu from "../data/dataMenu.json";
 
-export default class Breakfast extends Component{
-
-    render() {
-        return (
-            <div>
-                <p>Componente Desayuno </p>
-            </div>
-        )
-    }
+const Breakfast = ({statusOrder}) =>{
+    const setOrder = (event)=>{
+        event.preventDefault();
+            statusOrder(event.target.innerHTML);
+        }
+    return (
+dataMenu.breakfast.map((item)=>{
+    return(
+        <button onClick={setOrder} key={item.id}>
+            { item.name }
+        </button>
+    )
+})
+    )
 }
+
+export default Breakfast;
