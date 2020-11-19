@@ -6,7 +6,7 @@ const Table = () => {
 return(
 data.map((table)=>{
 return (
-<button onClick={()=>TakeOrder(table.id) } key={table.id}>
+<button className="buttonTable" onClick={()=>TakeOrder(table.id) } key={table.id}>
     {table.name}
 </button>)
 
