@@ -1,20 +1,17 @@
 
-import React from 'react';
-
-const NoFound = ({id}) => {
-
-    const cambio = (e)=>{
-        e.preventDefault();
-        id(e.target.value)
-    }
+const NotFound = ({cualquiercosa}) => {
+    // const cambio = (e)=>{
+    //     e.preventDefault();
+    //     cualquiercosa(e.target.value)
+    // }
     return (
         <div>
-        <h1>Página NO encontrada 404</h1>
-        <label>ENtrada</label>
+        <h1>Página no encontrada 404</h1>
+        {/* <label>Entrada</label>
         <input onChange={cambio}> 
-        </input>
+        </input> */}
         </div>
     )
 }
 
-export default NoFound;
+export default NotFound;
