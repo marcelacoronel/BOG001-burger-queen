@@ -42,7 +42,6 @@
     "lunch": [{
             "id": 5,
             "name": "Hamburguesa Sencilla",
-            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FimgBurger.png?alt=media&token=ab3c5781-a9fd-45c1-aed1-b04a0558266b",
             "price":10,
             "custom": {
                 "protein": [{
@@ -107,7 +106,6 @@
         {
             "id": 7,
             "name":"Acompañamientos",
-            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fpotatos.png?alt=media&token=93257333-34d0-41ba-97f6-87aeb1bf364c",
             "custom":{
                 "type": [{
                     "id":71,
@@ -125,7 +123,6 @@
     "drinks": [{
             "id": 8,
             "name":"Agua",
-            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F3.png?alt=media&token=f06bc155-20c1-47b1-b065-4f7ce108f779",
             "custom": {
             "type": [{
                 "id": 81,
@@ -141,7 +138,6 @@
             {
                 "id": 9,
                 "name":"Gaseosa",
-                "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F8.png?alt=media&token=74732875-d8b2-4de8-9de6-9d2bc3150d15",
                 "custom": {
                 "type": [{
                     "id": 91,

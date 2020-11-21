@@ -20,7 +20,7 @@
     margin: 5px;
     align-items: center;
     margin-right: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
 }
 
 .login-img-burger{
@@ -45,7 +45,7 @@
 .form-group {
     display: flex;
     flex-flow: column nowrap;
-    background-color: #383838;
+    background-color: $background-color;
     opacity: 0.8;
     font-weight: bold;
     color: white;
@@ -62,7 +62,7 @@
     }
 
     @mixin input-btn {
-        font-size: 1.25em;;
+        font-size: $text-medium;
         padding: 5px;
         border-radius: 6px;
         font-weight: bold;
@@ -72,14 +72,14 @@
         filter: blur(0.5px);
         margin: 10px 20px;
         text-align: center;
-        color:  #383838;
+        color: $background-color;
         height: 40px;
         @include input-btn;
     }
 
     button {
-        background-color:#E8BA24;
-        font-family: 'Montserrat', sans-serif;
+        background-color: $btn-primary-color;
+        font-family: $font;
         height: 50px;
         margin: 20px 20px;
         @include input-btn;
