@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-// import {route, switch } from 'react-router-dom';
-import { useParams } from "react-router-dom";
+// import React, { useState } from 'react';
+import NavBar from '../NavBar';
 
-import Table from '../Table';
+
 
 const PageWaiter = () => {
 
-    const {user} = useParams();
+    let getActiveUser = JSON.parse(localStorage.getItem('activeUser'))
 
     return (
+        
         <div className = "pageWaiter-container">
-            <h1>VISTA MESERO </h1>
-            <p>Usuario logueado {user}</p>
-           
+            <h1>VISTA MESERO {getActiveUser}</h1>
+            <p>Revisar si se deja mensaje  o info aclarativa cuando se inicia sesión o cargar componente Table </p>
+            
         </div>
+
     )
 
 }

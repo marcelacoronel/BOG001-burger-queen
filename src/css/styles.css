@@ -19,21 +19,6 @@ body {
   height: 100%;
 }
 
-footer {
-  background-color: #E8BA24;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  height: 3%;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-footer img {
-  margin: 0 10px;
-}
-
 /*--Component styles --*/
 .login-container {
   background-image: url("../img/burgerLogin.png");
@@ -117,13 +102,74 @@ footer img {
   font-weight: bold;
 }
 
-.navBar-color {
-  border: 3px solid #00ff2a;
-  background-color: gray;
+footer {
+  background-color: #E8BA24;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  height: 3%;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+footer img {
+  margin: 0 10px;
+}
+
+.navBar-container {
+  background-color: #201D1D;
   display: flex;
   flex-flow: column nowrap;
+  width: 10%;
+  height: 100%;
+  font-size: 1.25em;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+.navBar-container nav {
+  text-align: center;
+  margin-top: 20%;
+}
+.navBar-container ul {
+  align-items: center;
+  display: contents;
+}
+.navBar-container li {
+  list-style: none;
+  padding: 3px 3px;
+  margin-bottom: 30px;
+}
+.navBar-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.imgBurger {
+  width: 75%;
+  margin-top: 20px;
+}
+.imgBurger img {
+  width: 100%;
+}
+
+.imgNameLogo {
+  width: 100%;
+  margin-bottom: 10px;
+  transform: translateY(-30px);
+}
+.imgNameLogo img {
   width: 100%;
   height: 100%;
+}
+
+.time {
+  margin-top: 200px;
+}
+
+.date {
+  margin-top: 10px;
 }
 
 .pageWaiter-container {
@@ -135,11 +181,99 @@ footer img {
 }
 
 .layout-color {
-  border: 3px solid red;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.takingOrder-container {
+  border: solid 3px blueviolet;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu-order-container {
+  width: 90%;
+  height: 90%;
   display: flex;
   flex-flow: column nowrap;
-  width: 15%;
+  flex: 0 1 45%;
+  margin: 10px;
+  margin-top: 30px;
+}
+.menu-order-container button {
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 275px;
+  height: 50px;
+}
+
+.side-OrderDetail {
+  width: 90%;
+  height: 90%;
+  flex: 0 1 45%;
+  margin: 10px;
+  margin-top: 30px;
+}
+.side-OrderDetail label {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.side-OrderDetail input {
+  margin-left: 10px;
+  font-size: 1.25em;
+}
+
+.head-orderDetail {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 5px 10px;
+  align-items: center;
+}
+.head-orderDetail span {
+  margin-left: 30px;
+}
+
+.breakfast-container {
+  border: solid 5px #FFC300;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 100%;
+  font-weight: bold;
+}
+.breakfast-container h2 {
+  margin-left: 20px;
+}
+.breakfast-container h3 {
+  text-align: center;
+}
+
+.btn-breakfast {
+  border: solid 2px #919191;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px #919191;
+  width: 80%;
+  margin: 0 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.25em;
+}
+
+.imgBreakfast {
+  flex: 0 1 20%;
+}
+
+.textBreakfast {
+  flex: 0 1 80%;
+}
+
+.container-rowOrder {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /*# sourceMappingURL=styles.css.map */
