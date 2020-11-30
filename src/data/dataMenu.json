@@ -1,22 +1,30 @@
 {
     "breakfast": [{
             "id": 1,
+            "title": "CAFÉ",
             "name": "Café americano",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FamericanCoffe.png?alt=media&token=798bc772-c3e5-405d-8574-b3c3243f6810",
             "price": 5
         },
         {
             "id": 2,
             "name": "Café con leche",
+            "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FmilkCoffe.png?alt=media&token=b0383560-d653-4d5a-903b-61f6785e0795" ,
             "price": 7
         },
         {
             "id": 3,
+            "title": "SANDWICH",
             "name": "Sandwich de jamón y queso",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fsandwich.png?alt=media&token=002d103c-429c-42a5-b34f-598dc34fbc9d",
             "price": 10
         },
         {
             "id": 4,
-            "name": "Jugos",
+            "title": "JUGO",
+            "name": "Jugos de Fruta Natural",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fjuice.png?alt=media&token=c0bcf894-73c0-427f-b100-c95fa1caab71" ,
+            "price":7,
             "type":[{
                 "id":41,
                 "name":"Naranja",
