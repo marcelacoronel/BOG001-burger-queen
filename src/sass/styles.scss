@@ -23,12 +23,13 @@ body {
 
 
 /*--Component styles --*/
-    @import "../components/styles/login.scss";
-    @import "../components/styles/footer.scss";
-    @import "../components/styles/navBar.scss";
-    @import "../components/styles/pageWaiter";
-    @import "../components/styles/layout.scss";
-    @import "../components/styles/takingOrder.scss";
-    @import "../components/styles/rowOrder.scss";
+@import "../components/styles/login.scss";
+@import "../components/styles/footer.scss";
+@import "../components/styles/navBar.scss";
+@import "../components/styles/pageWaiter";
+@import "../components/styles/layout.scss";
+@import "../components/styles/takingOrder.scss";
+@import "../components/styles/menuCard.scss";
+@import "../components/styles/rowOrder.scss";
 
 
