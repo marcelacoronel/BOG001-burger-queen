@@ -1,0 +1,59 @@
+.takingOrder-container{
+    border: solid 3px blueviolet;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.menu-order-container {
+    // border: solid 2px green;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 45%;
+    margin: 10px;
+    margin-top: 30px;
+    
+
+    button {
+        // background-color: #FFC300;
+        font-size: 1.5em;
+        font-weight: bold;
+        width: 275px;
+        height: 50px;
+    }
+
+}
+
+.side-OrderDetail{
+    // border: solid 2px green;
+    width: 90%;
+    height: 90%;
+    flex: 0 1 45%;
+    margin: 10px;
+    margin-top: 30px;
+
+    label{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+    input{
+        margin-left: 10px;
+        font-size: 1.25em;
+    }
+}
+
+.head-orderDetail{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 5px 10px;
+    align-items: center;
+
+    span{
+        margin-left: 30px;
+    }
+}
+
