@@ -1,8 +1,64 @@
-.navBar-color{
-    border: 3px solid rgb(0, 255, 42);
-    background-color:rgb(128, 128, 128);
+.navBar-container{
+    background-color: #201D1D;
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
+    width: 10%;
     height: 100%;
+    font-size: 1.25em;
+    color: white;
+    align-items: center;
+    text-align: center;
+
+    nav {
+        // border: 3px solid rgb(4, 0, 255);
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    ul {
+        align-items: center;
+        display: contents;
+    }
+        
+    
+    li {
+        // border: 3px solid rgb(255, 0, 255);
+        list-style: none;
+        padding: 3px 3px;
+        margin-bottom: 30px ;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+  
+}
+
+.imgBurger{
+    width: 75%;
+    margin-top: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.imgNameLogo{
+    width: 100%;
+    margin-bottom: 10px;
+    transform: translateY(-30px);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.time {
+    margin-top: 200px;
+}
+
+.date {
+    margin-top: 10px;
 }
