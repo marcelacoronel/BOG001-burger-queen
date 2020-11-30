@@ -1,27 +1,26 @@
 import { Link } from "react-router-dom";
-import logoBQNav from '../img/logoBQNav.png';
+import logo from "../img/logoLetras.png";
+import waiter from "../img/waiter.png"
 //----------------------------------------------
 
 const Nav = () => {
 
 return (<div>
-    <Link to="/">
-            <img src ={logoBQNav} alt=""/>
-            <span>Cerrar Sesión</span>
-        </Link>
-
+    <img className="logoNav" src ={logo} alt=""/>
+        <img className="waiterNav" src ={waiter} alt=""/>
 <p>Nombre mesero</p>
 
 <ul>
-    <li><Link to= "/selecttable">Select Table</Link></li>
-    <li><Link to= "/status">Status Order</Link></li>
-    <li><Link to= "/stock">Stock</Link></li>
-    <li><Link to= "/bill">Bill</Link></li>
+    <li><Link className="linkNav" to= "/selecttable">Select Table</Link></li>
+    <li><Link className="linkNav" to= "/status">Status Order</Link></li>
+    <li><Link className="linkNav" to= "/stock">Stock</Link></li>
+    <li><Link className="linkNav" to= "/bill">Bill</Link></li>
     
 </ul>
 
-
-<p>Aqui va la fecha</p>
+<Link to="/login">
+            <span>Cerrar Sesión</span>
+        </Link>
     </div>
     )}
 

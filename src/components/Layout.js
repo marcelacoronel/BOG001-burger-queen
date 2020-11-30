@@ -1,15 +1,12 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
+import Nav from "./Nav";
 
 const Layout = (props) => {
- console.log(props);
     return (
-        <div className="layout-color">
-            <NavBar /> 
-            {props.children}
+        <div className="divLayout">
+            <div className="divNav"><Nav /></div>
+            <div className="divChildren">{props.children}</div>
         </div>
     )
-
 }
 
 export default Layout;

@@ -1,9 +1,12 @@
 // ----- Hoja de estilos --------
 import '../src/css/styles.css';
+//import NavBar from '../src/components/NavBar';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+//import { Component } from 'react';
 
 // ----- Dependencias --------
 import {useState} from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+
 
 // ----- Componentes --------
 import PageWaiter from '../src/components/pages/PageWaiter';
