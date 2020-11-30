@@ -1,39 +1,97 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
-//----------Componentes------------------------------
-import Breakfast from "./Breakfast";
-import Lunch from "./Lunch";
-import OrderDetail from "./OrderDetail";
-import Modal from "./Modal";
+import React, { useState } from 'react';
+import { useParams, Link } from "react-router-dom";
 
+// import * as firebase from "firebase/app";
+// import "firebase/firestore";
 
-const TakingOrder = () => {
-    // Estado que recibe el producto seleccionado en el menu y se le pasa al modal
-    const [detailProduct, setDetailProduct] = useState({});
-    // Muestra y oculta los menus seleccionados
-    const [show, setShow] = useState(true);
-    // Parametro que se pasa a través del router para identificar la mesa seleccionada 
+import Breakfast from '../components/Breakfast';
+import Lunch from '../components/Lunch';
+import OrderDetail from '../components/OrderDetail';
+import RowOrder from './RowOrder';
+import dataMenu from '../data/dataMenu.json';
+import MenuCard from './MenuCard';
+import BtnSelectMenu from './BtnSelectMenu';
+import Bill from './Bill';
+
+//------------------------------------------------
+
+const TakingOrder = ({ props }) => {
     const { id } = useParams();
-    //Estado que se modifica al seleccionar un producto en el menu y se le pasa al modal para que se visualice
-    const [ open, setOpen ] = useState(false);
-    // Captura el objeto creado en el modal y es recibido en OrderDetail
-    const [ order, setOrder ] = useState([]);
-    // Estado para los estilos dinámicos de los botones del modal
-    const [styleBtn, setStyleBtn] = useState([]);
-    //--------------------------------------------------------------------------->
-    return (<div className="containerTaking">
-        <div className="menuInTaking">
-        <h2>Mesa {id}</h2>
-        <button onClick= {()=>{setShow(true)}}>Desayuno</button>
-        <button onClick= {()=>{setShow(false)}}>Almuerzo y Cena</button>
-        <Modal show={open} close={setOpen} detailProduct={detailProduct} setDetailProduct={setDetailProduct} detailOrder={order} modifyOrder={setOrder} stylesBtn={ styleBtn } setStylesBtn={ setStyleBtn }/>
-        {show ? (<Breakfast statusOrder = {setDetailProduct} />) : (<Lunch statusOrder = {setDetailProduct} showModal={setOpen}/>) }
-        </div>
-        <div className="orderInTaking">
-        <p>Vista Toma de pedido</p>
-                <OrderDetail detailOrder={order} modifyOrder={setOrder}/>
-        </div>
-            </div>);
+
+    let activeUser = JSON.parse(localStorage.getItem('activeUser'))
+    const [menuBL, setMenuBL] = useState(true);
+    const [backg, setBackg] = useState('#FFC300');
+    const [bill, setBill] = useState(0);
+    const [order, setOrder] = useState([]);
+
+    const sendOrder = async (objOrder)=>{
+    //    await db.colection('orders').doc().set(objOrder);
+       console.log("Datos enviados")
+    }
+
+
+    return (
+        <div className="takingOrder-container">
+            <div className="menu-order-container">
+                <div>
+                    <BtnSelectMenu setMenuBL={setMenuBL} />
+
+                </div>
+                <div>
+
+                    {menuBL ? <MenuCard menu={dataMenu.breakfast} order={order} setOrder={setOrder} bill={bill} setBill={setBill}/> : <MenuCard menu={dataMenu.lunch} />}
+                </div>
+            </div>
+
+            <div className="side-OrderDetail">
+                <div className="head-orderDetail">
+                    <p>Mesero: <span>{activeUser}</span></p>
+                    <Link to="/table"><span>Mesa {id}</span></Link>
+                </div>
+                <label>Cliente:</label>
+                <input type="text" placeholder="Nombre Cliente"></input>
+
+
+                <div className="orderDetail-container">
+                    <div className="header-order">
+                        <h3>Item</h3>
+                        <h3>Cantidad</h3>
+                        <h3>Precio</h3>
+                    </div>
+                    <div className="content-order">
+                        <p>Agrega productos al pedido</p>
+
+                        {order.map((product, index) => (
+                        <RowOrder
+                            key={'itemProduc' + index}
+                            product={product}
+                            index={index}
+                            order={order}
+                            setOrder={setOrder}
+                            bill={bill}
+                            setBill={setBill}
+                        />
+                    ))}
+
+                    </div>
+                </div>
+                
+                <div>
+                    <Bill
+                        order={order}
+                        bill={bill}
+                        setBill={setBill} />
+
+                </div>
+
+                <div>
+                    <button className="btnEnviar" onClick={sendOrder(order)}>ENVIAR A COCINA</button>
+                    <button className="btnCancelar">CANCELAR</button>
+                </div>
+
+
+            </div>
+        </div>);
 }
 
 

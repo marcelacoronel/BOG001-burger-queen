@@ -1,12 +1,20 @@
-import Nav from "./Nav";
+import React, { Fragment } from 'react';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 const Layout = (props) => {
+
     return (
-        <div className="divLayout">
-            <div className="divNav"><Nav /></div>
-            <div className="divChildren">{props.children}</div>
-        </div>
+        <Fragment>
+            <div className="layout-color">
+            <NavBar /> 
+            {props.children}
+            </div>
+            <Footer/>
+        </Fragment>
+       
     )
+
 }
 
 export default Layout;
