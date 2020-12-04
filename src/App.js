@@ -10,13 +10,10 @@ import {useState} from 'react';
 
 // ----- Componentes --------
 import PageWaiter from '../src/components/pages/PageWaiter';
+import pageChef from '../src/components/pages/pageChef';
 import Login  from '../src/components/Login';
 import Layout from '../src/components/Layout';
-import Table from "../src/components/Table";
-import Breakfast from "../src/components/Breakfast";
-import Lunch from "../src/components/Lunch";
 import TakingOrder from "../src/components/TakingOrder";
-import OrderDetail from './components/OrderDetail';
 import OrderStatus from "../src/components/OrderStatus";
 import NoFound  from '../src/components/NoFound';
 
@@ -36,12 +33,11 @@ const App =() => {
           <Route exact path="/" component={Login} />
           <Layout>
               <Route exact path= "/pageWaiter/:user" component={PageWaiter}/>
-              <Route path="/table" component={Table} />
-              <Route path="/order/:id" component={TakingOrder} />
-              <Route path="/breakfast" component={Breakfast} />
-              <Route path="/lunch" component={Lunch} />
-              <Route path="/orderDetail" component={OrderDetail} />
+              {/* <Route path="/table" component={Table} /> */}
+              <Route path="/order" component={TakingOrder} />
+              {/* <Route path="/order/:id" component={TakingOrder} /> */}
               <Route path="/status" component={OrderStatus} />
+              <Route path="/pageChef" component={pageChef} />
           </Layout>
           <Route path="/404" component={NoFound} />
           <Redirect from="*" to="/404" />

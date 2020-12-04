@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import loginNamelogo from '../img/imgNameLogo.png';
 import {useHistory} from 'react-router-dom';
+
+import { firebase } from '../controller/firebase-config';
+
+import loginNamelogo from '../img/imgNameLogo.png';
 import imgLoginBurger from '../img/imgLoginBurger.png';
 import Footer from './Footer';
 
@@ -24,19 +27,26 @@ const Login = () => {
     const sendUser = (e) =>{
         e.preventDefault();
         let userLogin= user.mail;
+        let email =  user.mail;
+        let password = user.password;
         localStorage.setItem('activeUser',JSON.stringify(userLogin));
 
-        if (userLogin === "mesero@gmail.com"){
-            history.push('/pageWaiter')
-        }
-        else if (userLogin === "chef@gmail.com") {
-            history.push('/pageChef')
-        }
-        else {
-            localStorage.clear('activeUser')
-            history.push('/');
-        }
+        firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+
+            if (userLogin === "mesero@gmail.com"){
+                history.push('/order')
+                console.log('logueado');
+            }
+            else if (userLogin === "chef@gmail.com") {
+                history.push('/pageChef')
+            }
+            else {
+                localStorage.clear('activeUser')
+                history.push('/');
+            }
+
             
+          });
 
         e.target.reset();
     }

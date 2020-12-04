@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import {firebase} from '../controller/firebase-config';
+
 import iconLogout from '../img/iconLogout.png';
 import loginNameLogo from '../img/imgNameLogo.png';
 import imgLoginBurger from '../img/imgLoginBurger.png';
@@ -11,6 +13,19 @@ const NavBar = () => {
     let getDate = new Date()
     let currentDate = getDate.toDateString();
     let localTime = getDate.toLocaleTimeString();
+
+    const history = useHistory();
+    
+     // Cerrar Sesión
+     const signOut = () => firebase.auth().signOut()
+     .then(() => {
+         localStorage.removeItem('username');
+         console.log('Saliendo...!');
+         history.push('/');
+     })
+     .catch(() => {
+     // console.log(error);
+     });
    
     return (
         <div className = "navBar-container">
@@ -34,14 +49,22 @@ const NavBar = () => {
                     )
                 })}
                     
-                    <li>
+                    {/* <li>
                         <Link to="/">
                             <div><img src ={iconLogout} alt=""/></div>
                             <div><span>Cerrar Sesión</span></div>
                         </Link>
-                    </li>    
+                    </li>     */}
                 </ul>  
             </nav> 
+
+            <div>
+                
+                <button className="btnSignOut" onClick={signOut}>
+                    <div><img src ={iconLogout} alt=""/></div>
+                    Cerrar sesión
+                </button>
+            </div>
             
             <div className="time">
                 <span>{localTime}</span> 
