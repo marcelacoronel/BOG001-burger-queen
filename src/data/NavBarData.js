@@ -6,7 +6,7 @@ import iconOrderStatus from '../img/iconOrderStatus.png';
 const NavBarData = [
     {
         title: 'Tomar Pedido',
-        path: "/table",
+        path: "/order",
         icon: iconTakeOrder,
         cName: 'navOptions'
     },

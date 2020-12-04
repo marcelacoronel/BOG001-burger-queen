@@ -1,10 +1,22 @@
-const OrderDetail = ({detailOrder})=>{
-    return(detailOrder.map((item,index)=>{
-        return (
-            <div key={"item-" + index}>
-                <p>{item.name} {item.price} {item.quantity}</p>
-                {item.custom.map((itemCustom,idxItem)=>{return(<ul key={"custom-"+idxItem}><li>{itemCustom.name} {itemCustom.price}</li></ul>)})}
-            </div>)}));
+import React from 'react'
+
+const OrderDetail = ({ dataOrderDetail }) => {
+    console.log(dataOrderDetail);
+
+    return (
+        <>
+            <div>
+                <p>Orden # : {dataOrderDetail.id}</p>
+                <span>Hora: {dataOrderDetail.hour}</span>
+                <p>Cliente: {dataOrderDetail.clientName}</p>
+            </div>
+            <div>
+                <p>{dataOrderDetail.orderStatus}</p>
+            </div>
+
+
+        </>
+    )
 }
 
 export default OrderDetail;

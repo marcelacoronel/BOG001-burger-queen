@@ -3,11 +3,10 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 
 const Layout = (props) => {
-
     return (
         <Fragment>
             <div className="layout-color">
-            <NavBar /> 
+            <NavBar props={props}/> 
             {props.children}
             </div>
             <Footer/>

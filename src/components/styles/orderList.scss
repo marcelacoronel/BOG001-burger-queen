@@ -1,0 +1,43 @@
+.container-card-order {
+    margin: 10px;
+    border: solid 2px #919191;
+    box-shadow: 10px 5px 5px #919191;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80%;
+    height: 100px;
+    align-items: center;
+    font-size: $text-big;
+}
+
+.numberOrder {
+    flex: 0 1 70%;
+    margin-left: 20px;
+}
+
+@mixin status {
+    flex: 0 1 30%;
+    // background-color: #E16363;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+    p {
+        margin-top: 30px;
+    }
+}
+
+.cocina {
+    background-color: #E16363;
+    @include status;
+}
+
+.proceso {
+    background-color: #FFC300;
+    @include status;
+
+}
+
+.servir {
+    background-color: #6BAB19;
+    @include status;
+}
