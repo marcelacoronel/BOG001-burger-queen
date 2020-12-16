@@ -1,0 +1,17 @@
+
+.active {
+    background-color:$btn-primary-color;
+    border: solid 2px $btn-primary-color ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family:$font;
+}
+
+.disable {
+    background-color:#EFEFEF;
+    border: solid 2px grey ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family:$font;
+    filter: blur(1px);
+}

@@ -1,5 +1,6 @@
 {
-    "breakfast": [{
+    "breakfast": [
+        {
             "id": 1,
             "title": "CAFÉ",
             "name": "Café americano",
@@ -9,7 +10,7 @@
         {
             "id": 2,
             "name": "Café con leche",
-            "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FmilkCoffe.png?alt=media&token=b0383560-d653-4d5a-903b-61f6785e0795" ,
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FmilkCoffe.png?alt=media&token=b0383560-d653-4d5a-903b-61f6785e0795",
             "price": 7
         },
         {
@@ -23,140 +24,162 @@
             "id": 4,
             "title": "JUGO",
             "name": "Jugos de Fruta Natural",
-            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fjuice.png?alt=media&token=c0bcf894-73c0-427f-b100-c95fa1caab71" ,
-            "price":7,
-            "type":[{
-                "id":41,
-                "name":"Naranja",
-                "price":7
-            },
-            {
-                "id":42,
-                "name":"Mandarina",
-                "price":7
-            },
-            {
-                "id":43,
-                "name":"Fresa",
-                "price":7
-            },
-            {
-                "id":44,
-                "name":"Mango",
-                "price":7
-            }]
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fjuice.png?alt=media&token=c0bcf894-73c0-427f-b100-c95fa1caab71",
+            "price": 7,
+            "type": [
+                {
+                    "id": 41,
+                    "name": "Naranja",
+                    "price": 7
+                },
+                {
+                    "id": 42,
+                    "name": "Mandarina",
+                    "price": 7
+                },
+                {
+                    "id": 43,
+                    "name": "Fresa",
+                    "price": 7
+                },
+                {
+                    "id": 44,
+                    "name": "Mango",
+                    "price": 7
+                }
+            ]
         }
     ],
-    "lunch": [{
+    "lunch": [
+        {
             "id": 5,
             "name": "Hamburguesa Sencilla",
-            "price":10,
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FimgBurger1.png?alt=media&token=61af913f-2c9c-47b8-8066-c419604ba441",
+            "price": 10,
             "custom": {
-                "protein": [{
-                    "id":51,
-                    "name": "Pollo",
-                    "price": 0
-                },
-                {
-                    "id":52,
-                    "name": "Carne",
-                    "price": 0
-                },
-                {
-                    "id":53,
-                    "name": "Veggie",
-                    "price": 0
-                }],
-                "adicional": [{
-                    "id":54,
-                    "name":"Queso",
-                    "price":1
-                },
-                {
-                    "id":55,
-                    "name":"Huevo",
-                    "price":1
-                }]
+                "protein": [
+                    {
+                        "id": 51,
+                        "name": "Pollo",
+                        "price": 0
+                    },
+                    {
+                        "id": 52,
+                        "name": "Carne",
+                        "price": 0
+                    },
+                    {
+                        "id": 53,
+                        "name": "Veggie",
+                        "price": 0
+                    }
+                ],
+                "adicional": [
+                    {
+                        "id": 54,
+                        "name": "Queso",
+                        "price": 1
+                    },
+                    {
+                        "id": 55,
+                        "name": "Huevo",
+                        "price": 1
+                    }
+                ]
             }
         },
         {
-            "id":6,
+            "id": 6,
             "name": "Hamburguesa Doble",
             "price": 15,
             "custom": {
-                "protein": [{
-                    "id":61,
-                    "name": "Pollo",
-                    "price": 0
-                },
-                {
-                    "id":62,
-                    "name": "Carne",
-                    "price": 0
-                },
-                {
-                    "id":63,
-                    "name": "Veggie",
-                    "price": 0
-                }],
-                "adicional": [{
-                    "id":64,
-                    "name":"Queso",
-                    "price":1
-                },
-                {
-                    "id":65,
-                    "name":"Huevo",
-                    "price":1
-                }]
+                "protein": [
+                    {
+                        "id": 61,
+                        "name": "Pollo",
+                        "price": 0
+                    },
+                    {
+                        "id": 62,
+                        "name": "Carne",
+                        "price": 0
+                    },
+                    {
+                        "id": 63,
+                        "name": "Veggie",
+                        "price": 0
+                    }
+                ],
+                "adicional": [
+                    {
+                        "id": 64,
+                        "name": "Queso",
+                        "price": 1
+                    },
+                    {
+                        "id": 65,
+                        "name": "Huevo",
+                        "price": 1
+                    }
+                ]
             }
         },
         {
             "id": 7,
-            "name":"Acompañamientos",
-            "custom":{
-                "type": [{
-                    "id":71,
-                    "name":"Papas Fritas",
-                    "price":5
-                },
-                {
-                    "id":72,
-                    "name":"Aros de Cebolla",
-                    "price":5
-                }]
+            "name": "Acompañamientos",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FonioRings.png?alt=media&token=2e31241b-1e72-4260-999b-e88448d63a2f",
+            "custom": {
+                "type": [
+                    {
+                        "id": 71,
+                        "name": "Papas Fritas",
+                        "price": 5
+                    },
+                    {
+                        "id": 72,
+                        "name": "Aros de Cebolla",
+                        "price": 5
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "name": "Agua",
+            "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fwater.png?alt=media&token=a364f2a8-dbaa-4948-a438-a29f5ab8e0a5",
+            "custom": {
+                "type": [
+                    {
+                        "id": 81,
+                        "name": "Agua 500ml",
+                        "price": 5
+                    },
+                    {
+                        "id": 82,
+                        "name": "Agua 750ml",
+                        "price": 7
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "name": "Gaseosa",
+            "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fsoda.png?alt=media&token=eed681d2-9c36-4bc4-b37f-0cb282113383" ,
+            "custom": {
+                "type": [
+                    {
+                        "id": 91,
+                        "name": "Gaseosa 500ml",
+                        "price": 7
+                    },
+                    {
+                        "id": 92,
+                        "name": "Gaseosa 750ml",
+                        "price": 10
+                    }
+                ]
             }
         }
-    ],
-    "drinks": [{
-            "id": 8,
-            "name":"Agua",
-            "custom": {
-            "type": [{
-                "id": 81,
-                "name":"Agua 500ml",
-                "price":5
-            },
-            {
-                "id": 82,
-                "name":"Agua 750ml",
-                "price":7
-            }]
-            }},
-            {
-                "id": 9,
-                "name":"Gaseosa",
-                "custom": {
-                "type": [{
-                    "id": 91,
-                    "name":"Gaseosa 500ml",
-                    "price":7
-                },
-                {
-                    "id": 92,
-                    "name":"Gaseosa 750ml",
-                    "price":10
-                }]
-                }}
     ]
 }

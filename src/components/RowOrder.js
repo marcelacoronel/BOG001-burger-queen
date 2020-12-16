@@ -12,6 +12,7 @@ function RowOrder(props) {
         const orderCopy = [...orderA];
         orderCopy[i].number += 1;
         orderCopy[i].priceTotal = orderCopy[i].price * orderCopy[i].number;
+        props.updateBill(orderCopy[i].price);
         console.log(orderCopy);
         return orderCopy;
     }
@@ -21,6 +22,7 @@ function RowOrder(props) {
         const orderCopy = [...orderA];
         orderCopy[i].number -= 1;
         orderCopy[i].priceTotal = orderCopy[i].price * orderCopy[i].number;
+        props.updateBill( -orderCopy[i].price);
         console.log(orderCopy);
         return orderCopy;
     }
@@ -29,11 +31,12 @@ function RowOrder(props) {
     return (
         <div className="container-rowOrder">
             <p>{props.product.product}</p>
-            <img src={iconSubtract}  onClick={() => {(props.product.number - 1 === 0) ? props.setOrder(props.order.filter((item) => item.id !== props.index )) : props.setOrder(subtractItem(props.order, props.index))}}></img>
+            <img src={iconSubtract}  onClick={() => {(props.product.number - 1 === 0) ? props.setOrder(props.order.filter((item,index) => index !== props.index )) : props.setOrder(subtractItem(props.order, props.index))}}></img>
             <p>{props.product.number}</p>
             <img src={iconAdd} onClick={()=>props.setOrder(addItem(props.order, props.index)) }></img>
-            <p>{props.product.price}</p>
-            <img src={iconRemove} onClick={()=>props.setOrder(props.order.filter((item) => item.id !== props.product.id ))}></img>
+            <p>$ {props.product.price}</p>
+            <p>${props.product.priceTotal}</p>
+            <img src={iconRemove} onClick={()=>props.setOrder(props.order.filter((item,index) => index !== props.index )) }></img>
             
         </div>
     )

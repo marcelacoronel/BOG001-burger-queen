@@ -2,4 +2,9 @@
 .container-rowOrder{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    img {
+        width: 45px;
+
     }
+}

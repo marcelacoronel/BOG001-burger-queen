@@ -1,59 +1,120 @@
 .takingOrder-container{
-    border: solid 3px blueviolet;
     width: 100vw;
     display: flex;
     flex-flow: row nowrap;
 }
 
 .menu-order-container {
-    // border: solid 2px green;
     width: 90%;
     height: 90%;
     display: flex;
     flex-flow: column nowrap;
-    flex: 0 1 45%;
+    flex: 0 1 42%;
     margin: 10px;
     margin-top: 30px;
-    
-
     button {
-        // background-color: #FFC300;
         font-size: 1.5em;
         font-weight: bold;
-        width: 275px;
-        height: 50px;
+        width: 260px;
+        height: 60px;
     }
-
 }
 
-.side-OrderDetail{
-    // border: solid 2px green;
+.container-menuCards {
+    border: solid 3px $btn-primary-color;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 100%;
+    height: 90%;
+    h2 {
+        margin-left: 20px;
+    }
+   
+}
+
+.side-OrderDetail {
     width: 90%;
     height: 90%;
-    flex: 0 1 45%;
+    flex: 0 1 48%;
     margin: 10px;
     margin-top: 30px;
-
-    label{
+    label {
         margin-top: 10px;
         margin-left: 10px;
         font-size: 1.25em;
         font-weight: bold;
     }
-    input{
+    input {
+        width: 70%;
         margin-left: 10px;
         font-size: 1.25em;
+        padding: 2px 10px;
+    }
+    p {
+        font-weight: bold;
+        margin-right: 10px;
+        text-align: center;
+    }
+    span {
+        font-weight: normal;
+    }
+    h2 {
+        text-align: right;
+        margin-right: 50px;
     }
 }
 
-.head-orderDetail{
+.head-orderDetail {
     display: flex;
     flex-flow: row nowrap;
     margin: 5px 10px;
     align-items: center;
-
+    font-size: $text-medium;
     span{
-        margin-left: 30px;
+        margin-left: 5px;
     }
 }
 
+.header-order {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    h3 {
+       justify-content: center;
+       font-weight: bold;
+       font-size:$text-medium;
+    }
+}
+
+.container-head-detail {
+    border: solid 2px $btn-primary-color;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+}
+
+.content-order {
+    width: 100%;
+    height: 400px;
+
+}
+
+.btn-bottom {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 10px;
+    button {
+        width: 70%;
+        height: 50px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-family: $font;
+        font-size: $text-big;
+    }
+}
+
+.btnEnviar {
+    background-color: $btn-primary-color;
+}
