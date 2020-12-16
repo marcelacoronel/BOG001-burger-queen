@@ -3,25 +3,25 @@ import { useState } from "react";
 //-----------------------------------------
 
 
-const Table = ({ tab, order, setOrder, takingTable, setTakingTable }) => {
+const Table = ({ tab, orderTotal, setOrderTotal, takingTable, setTakingTable }) => {
 
     const [selectTable, setSelectTable] = useState(false);
 
     const TakeOrder = () => {
-        const orderCopy = [...order, { table: tab.name }];
+        const orderCopy = { ...orderTotal, table: tab.name };
         console.log(orderCopy);
         setTakingTable(false);
         return orderCopy;
     }
 
-
     return (
-        <button onClick={() => setOrder(TakeOrder)} style={StyleUnavailable(tab.status)}>
+
+        <button onClick={() => setOrderTotal(TakeOrder)} style={StyleUnavailable(tab.status)}>
             {tab.name}
-        </button>)
+        </button>
+    )
+
 }
-
-
 
 const StyleUnavailable = (status) => {
     return {

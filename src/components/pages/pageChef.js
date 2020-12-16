@@ -47,6 +47,7 @@ const PageWaiter = () => {
                     <OrderDetail
                         dataOrderDetail={dataOrderDetail}
                     />
+                    <button>INICIAR</button>
                 </div>
             </div>
 

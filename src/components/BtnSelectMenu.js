@@ -1,26 +1,31 @@
-
-
 import React, { useState } from 'react'
 
 function BtnSelectMenu(props) {
 
-   // const [menu, setmenu] = useState(true);
-   //  const [backg, setBackg] = useState(true);
-
-   
-   // const setStyle = (backg)=>{
-
-   //     backg ? '#FFC300':'red';
-   // setStyle={props.setBackg(true)
-   // };  
+    // const btnMenu = props.menuBL ? "active" : "disable";
+    // const btnMenu2 = props.setMenuBL ? "active" : "disable";
+    const [btnMenu1, setBtnMenu1] = useState("active");
+    const [btnMenu2, setBtnMenu2]= useState("disable");
 
 
-   return (
-       <div>
-            <button onClick={() => props.setMenuBL(true) } > DESAYUNO</button>
-            <button onClick={() => props.setMenuBL(false)}> ALMUERZO - CENA</button>
-       </div>
-   )
+    const selectBreakfast = ()=>{
+        props.setMenuBL(true)
+        setBtnMenu1("active");
+        setBtnMenu2("disable");
+    };
+
+    const selectLuch = ()=>{
+        props.setMenuBL(false);
+        setBtnMenu1("disable");
+        setBtnMenu2("active");
+    };
+
+    return (
+        <div>
+            <button className={btnMenu1} onClick={selectBreakfast} > DESAYUNO</button>
+            <button className={btnMenu2} onClick={selectLuch}> ALMUERZO - CENA</button>
+        </div>
+    )
 }
 
 export default BtnSelectMenu;
