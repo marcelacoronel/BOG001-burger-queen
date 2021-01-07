@@ -53,7 +53,7 @@
     "lunch": [
         {
             "id": 5,
-            "name": "Hamburguesa Sencilla",
+            "name": "Hamburguesa Sencilla o Doble",
             "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FimgBurger1.png?alt=media&token=61af913f-2c9c-47b8-8066-c419604ba441",
             "price": 10,
             "custom": {
@@ -90,53 +90,17 @@
         },
         {
             "id": 6,
-            "name": "Hamburguesa Doble",
-            "price": 15,
-            "custom": {
-                "protein": [
-                    {
-                        "id": 61,
-                        "name": "Pollo",
-                        "price": 0
-                    },
-                    {
-                        "id": 62,
-                        "name": "Carne",
-                        "price": 0
-                    },
-                    {
-                        "id": 63,
-                        "name": "Veggie",
-                        "price": 0
-                    }
-                ],
-                "adicional": [
-                    {
-                        "id": 64,
-                        "name": "Queso",
-                        "price": 1
-                    },
-                    {
-                        "id": 65,
-                        "name": "Huevo",
-                        "price": 1
-                    }
-                ]
-            }
-        },
-        {
-            "id": 7,
             "name": "Acompañamientos",
             "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2FonioRings.png?alt=media&token=2e31241b-1e72-4260-999b-e88448d63a2f",
             "custom": {
                 "type": [
                     {
-                        "id": 71,
+                        "id": 61,
                         "name": "Papas Fritas",
                         "price": 5
                     },
                     {
-                        "id": 72,
+                        "id": 62,
                         "name": "Aros de Cebolla",
                         "price": 5
                     }
