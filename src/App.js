@@ -42,7 +42,6 @@ const App =() => {
           <Route path="/404" component={NoFound} />
           <Redirect from="*" to="/404" />
         </Switch>
-        
       </Router> 
     </div>
   );

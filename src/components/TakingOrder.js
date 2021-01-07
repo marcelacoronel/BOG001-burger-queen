@@ -10,6 +10,7 @@ import dataMenu from '../data/dataMenu.json';
 import Table from "./Table";
 import RowOrder from './RowOrder';
 import MenuCard from './MenuCard';
+import MenuCardLuch from './MenuCardLunch';
 import BtnSelectMenu from './BtnSelectMenu';
 import Bill from './Bill';
 
@@ -60,7 +61,8 @@ const TakingOrder = ({ props }) => {
     }
 
     const cleanOrder = () => {
-        setTakingTable(true)
+        setTakingTable(true);
+        setMenuBL(true);
     }
 
     return (
@@ -87,7 +89,7 @@ const TakingOrder = ({ props }) => {
                             <BtnSelectMenu setMenuBL={setMenuBL} menuBL={menuBL} />
                         </div>
                         <div className="container-menuCards">
-                            {menuBL ? <MenuCard menu={dataMenu.breakfast} order={order} setOrder={setOrder} bill={bill} setBill={setBill} updateBill={updateBill} /> : <MenuCard menu={dataMenu.lunch} order={order} setOrder={setOrder} bill={bill} setBill={setBill} updateBill={updateBill} />}
+                            {menuBL ? <MenuCard menu={dataMenu.breakfast} order={order} setOrder={setOrder} bill={bill} setBill={setBill} updateBill={updateBill} /> : <MenuCardLuch menu={dataMenu.lunch} order={order} setOrder={setOrder} bill={bill} setBill={setBill} updateBill={updateBill} />}
                         </div>
                     </div>
 
